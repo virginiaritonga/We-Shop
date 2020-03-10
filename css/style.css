@@ -62,3 +62,47 @@ body{
     padding: 10px 0px;
     overflow: hidden;
 }
+
+
+#container-user-akses {
+    width: 350px;
+    height: auto;
+    margin: 50px auto;
+}
+
+.elemen-form {
+    margin-bottom: 15px;
+}
+
+.elemen-form label {
+    display: block;
+    font-weight: bold;
+}
+
+.elemen-form span {
+    display: block;
+}
+
+
+.elemen-form span input[type="text"],
+.elemen-form span input[type="password"],
+.elemen-form span textarea,
+.elemen-form span select {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.elemen-form span input[type="submit"] {
+    background: #1e5474;
+    border: none;
+    color: white;
+    padding: 7px 20px;
+    border-radius: 3px;
+    font-size: 9px;
+    cursor: pointer;
+}
+
+.elemen-form span input[type="submit"]:hover{
+  background: orange;
+}
