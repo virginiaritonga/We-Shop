@@ -1,5 +1,7 @@
 <?php
   include_once("function/helper.php");
+  $page = isset($_GET['page']) ? $_GET['page'] : false;
+  // echo $page;
 ?>
 
 <!DOCTYPE html>
@@ -28,7 +30,18 @@
             </div>
         </div>
 
-        <div id="content"></div>
+        <div id="content">
+
+          <?php
+              $filename = "$page.php";
+              if(file_exists($filename)){
+                include_once($filename);
+              }else{
+                echo "Maaf, file tersebut tidak ada di dalam sistem";
+              }
+          ?>
+
+        </div>
         <div id="footer">
             <p>copyright weshop 2020</p>
         </div>
