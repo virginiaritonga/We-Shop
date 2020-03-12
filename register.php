@@ -1,7 +1,13 @@
 <div id="container-user-akses">
 
-  <form action="<?php echo BASE_URL."proses_register"; ?>" method="POST">
+  <form action="<?php echo BASE_URL."proses_register.php"; ?>" method="POST">
 
+    <?php
+      $notif = isset($_GET['notif']) ? $_GET['notif'] : false;
+      if($notif == "require"){
+        echo "<div class='notif'>Maaf, kamu harus melengkapi form di bawah ini</div>";
+      }
+     ?>
     <div class="elemen-form">
       <label>Nama Lengkap</label>
       <span><input type="text" name="nama_lengkap" /></span>
